@@ -1,11 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </head>
-<body>
-    
+<body class="bg-black text-white min-h-screen flex flex-col">
+    <header class="bg-black border-b border-slate-800 py-6 px-10 shadow-md sticky top-0 z-30 flex justify-between items-center">
+        <h1 class="text-4xl font-bold text-red-600 tracking-wider">CinéTrack</h1>            
+    </header>
+    <div class="flex flex-1 relative overflow-hidden">
+        <main class="flex-1 p-6 overflow-y-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
+                <input type="text" id="search-input" placeholder="Rechercher un film ou une serie" class="w-full md:w-1/3 bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-red-600">
+                <div id="filter-buttons" class="flex gap-2">
+                    <button data-filter="all" class="filter-btn bg-red-600 px-4 py-2 rounded-lg text-sm font-semibold transition">Tous</button>
+                    <button data-filter="movie" class="filter-btn bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-lg text-sm font-semibold transition border border-slate-700">Films</button>
+                    <button data-filter="series" class="filter-btn bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-lg text-sm font-semibold transition border border-slate-700">Séries</button>
+                </div>
+            </div>
+            <div id="catalog-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2"></div>
+            <div id="pagination-container" class="flex justify-center items-center gap-4 mt-8 "></div>
+        </main>
+    </div>
 </body>
 </html>
