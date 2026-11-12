@@ -26,8 +26,18 @@
             <div id="pagination-container" class="flex justify-center items-center gap-4 mt-8 "></div>
         </main>
         <aside id="favaorites-sidebar" class="w-80 bg-slate-800 border-l border-slate-700 p-6 flex flex-col">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold">Mes favoris</h2>
         </aside>
+        <div id="movie-modal" class="fixed inset-0 z-50 flex items-center justify-center  bg-black/80 hidden">
+            <div class="bg-slate-900 border border-slate-700 rounded-xl w-full max-w-lg p-6 relative shadow-2xl text-white">
+                <button id="close-modal" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl font-bold cursor-pointer">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div id="modal-content"></div>
+            </div>
+        </div>
     </div>
-    <script type="module" src="/js/api.js"></script>
+<script type="module" src="/js/main.js"></script>
 </body>
 </html>

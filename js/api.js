@@ -1,3 +1,4 @@
+
 const ApiUrl="https://raw.githubusercontent.com/ouchad97/cinetrack-api/main/cinetrack-data.json";
 export async function Movies(){
     try{
@@ -10,6 +11,7 @@ export async function Movies(){
         return data;
     }catch(error){
         console.log(error.message);
+        return[];
     }
 }
-Movies();
+
