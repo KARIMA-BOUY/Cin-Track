@@ -142,8 +142,17 @@ export function openModal(id, items) {
                         Durée : ${item.duration} min
                     </p>
                 ` : ""}
-                ${item.seasons ? `<p class="text-slate-400 text-xs mt-3">
-                    <i class="fa-solid fa-video"></i> realisation :${item.directors.join(", ")} </p> `: "" }
+                     ${item.seasons ? `
+                    <p class="text-slate-400 text-xs mt-3">
+                        Saisons : ${item.seasons.length}
+                    </p>
+                ` : ""}
+                ${item.directors ? `
+                    <p class="text-slate-400 text-xs mt-2">
+                        Réalisateur : ${item.directors.join(", ")}
+                    </p>
+                ` : ""}
+
             </div>
         </div>
     `;
