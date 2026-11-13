@@ -1,17 +1,22 @@
+const ApiUrl = "https://raw.githubusercontent.com/ouchad97/cinetrack-api/main/cinetrack-data.json";
 
-const ApiUrl="https://raw.githubusercontent.com/ouchad97/cinetrack-api/main/cinetrack-data.json";
-export async function Movies(){
-    try{
-        const res=await fetch(ApiUrl);
-        if(!res.ok){
-            throw new Error("erreur Api");
+export async function Movies() {
+
+    try {
+        const res = await fetch(ApiUrl);
+
+        if (!res.ok) {
+            throw new Error("Erreur API");
         }
-        const data=await res.json();
-        console.log(data);
+
+        const data = await res.json();
+
         return data;
-    }catch(error){
+
+    } catch (error) {
+
         console.log(error.message);
-        return[];
+
+        return [];
     }
 }
-
