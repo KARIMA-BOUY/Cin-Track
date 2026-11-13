@@ -31,8 +31,8 @@
 CinéTrack/
 ├── index.html          # Page principale
 ├── js/
-│   ├── main.js         # Point d'entrée et logique principale[cite: 1]
-│   ├── api.js          # Appels API et récupération des données[cite: 1]
-│   ├── ui.js           # Rendu de l'interface et gestion des modales[cite: 1]
-│   └── favorite.js     # Gestion de la liste des favoris[cite: 1]
+│   ├── main.js         # Point d'entrée et logique principale
+│   ├── api.js          # Appels API et récupération des données
+│   ├── ui.js           # Rendu de l'interface et gestion des modales
+│   └── favorite.js     # Gestion de la liste des favoris
 └── README.md           # Documentation du projet
