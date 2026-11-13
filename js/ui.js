@@ -19,9 +19,8 @@ const paginationContainer = document.getElementById("pagination-container");
 function createCard(item) {
     return `
         <div data-id="${item.id}"
-            class="movie-card relative group bg-slate-900 rounded-xl overflow-hidden border border-slate-800 flex flex-col justify-end h-80 shadow-lg hover:border-red-600/50 transition cursor-pointer">
+            class="movie-card relative group bg-slate-900 rounded-xl overflow-hidden border border-slate-800 flex flex-col justify-end h-96 shadow-lg hover:border-red-600/50 transition cursor-pointer">
 
-            <!-- Image dyal background -->
             <img src="${item.image || 'https://via.placeholder.com/300x400'}"
                 alt="${item.title}"
                 class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300">
@@ -32,7 +31,7 @@ function createCard(item) {
                 <i class="${isFavorite(item.id) ? 'fa-solid text-red-500' : 'fa-regular'} fa-heart"></i>
             </button>
             <div class="relative p-4 z-10 flex flex-col items-start gap-1">
-                <span class="text-[10px] font-bold uppercase tracking-wider bg-blue-600 text-white px-2 py-0.5 rounded shadow">
+                <span class="text-[10px] font-bold uppercase tracking-wider bg-red-600 text-white px-2 py-0.5 rounded shadow">
                     ${item.type === "movie" ? "FILM" : "SÉRIE"}
                 </span>
                 <h3 class="text-base font-bold truncate w-full text-white mt-1">
