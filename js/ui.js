@@ -19,7 +19,7 @@ const paginationContainer = document.getElementById("pagination-container");
 function createCard(item) {
     return `
         <div data-id="${item.id}"
-            class="movie-card relative group bg-slate-900 rounded-xl overflow-hidden border border-slate-800 flex flex-col justify-end h-96 shadow-lg hover:border-red-600/50 transition cursor-pointer">
+            class="movie-card relative group bg-slate-900 rounded-xl overflow-hidden border border-slate-800 flex flex-col justify-end h-96 shadow-lg  transition cursor-pointer">
 
             <img src="${item.image || 'https://via.placeholder.com/300x400'}"
                 alt="${item.title}"
@@ -86,6 +86,7 @@ function updateCatalog() {
 function renderPagination(totalPages) {
     if (!paginationContainer) return;
     paginationContainer.innerHTML = "";
+    
     for (let i = 1; i <= totalPages; i++) {
         paginationContainer.innerHTML += `
             <button data-page="${i}"class="${i === currentPage ? 'bg-red-600' : 'bg-slate-800'} px-4 py-2 rounded-lg">${i}
@@ -141,6 +142,8 @@ export function openModal(id, items) {
                         Durée : ${item.duration} min
                     </p>
                 ` : ""}
+                ${item.seasons ? `<p class="text-slate-400 text-xs mt-3">
+                    <i class="fa-solid fa-video"></i> realisation :${item.directors.join(", ")} </p> `: "" }
             </div>
         </div>
     `;
